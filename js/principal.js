@@ -2,6 +2,12 @@
   var titulo = document.querySelector(".titulo");
       titulo.textContent = "Aparecida Nutricionista";
 
+  titulo.addEventListener("click", function(){
+      return console.log("Olá você clicou no Aparecida Nutricionista");
+  })
+
+
+
   var pacientes = document.querySelectorAll(".paciente");
 
 
@@ -24,7 +30,6 @@ for( var i=0; i<pacientes.length; i++){
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido!";
-        //paciente.style.color = "red"; 
         paciente.classList.add("paciente-invalido");
       }
 
