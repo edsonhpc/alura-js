@@ -43,11 +43,3 @@ for( var i=0; i<pacientes.length; i++){
         tdImc.textContent =  imc.toFixed(2);
       }
 }
-
-var botaoAdicionar = document.querySelector("#adicionar-paciente");
-    botaoAdicionar.textContent;
-
-    botaoAdicionar.addEventListener("click", function(event){
-       event.preventDefault();
-        return console.log("Olá o botão foi clicado");
-    })
