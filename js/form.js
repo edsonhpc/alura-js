@@ -20,16 +20,20 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
      return;
    }
 
-   var table  = document.querySelector("#tabela-pacientes");
+   adicionaPacienteNaTabela(paciente); //Chamada da função que insere o paciente na tabela
 
-       table.appendChild(pacienteTr);
-
-       form.reset();
-
-    var mensagensErro = document.querySelector("#mensagens-erro");
-        mensagensErro.innerHTML = "";
+   form.reset();
+   var mensagensErro = document.querySelector("#mensagens-erro");
+       mensagensErro.innerHTML = "";
 
 });
+
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+}
+
 
 function exibeMensagensDeErro(erros){
   var ul = document.querySelector("#mensagens-erro");
